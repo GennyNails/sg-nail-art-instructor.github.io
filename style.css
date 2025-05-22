@@ -1,0 +1,185 @@
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background: url('sfondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 168px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 130px;
+  margin-bottom: 40px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  margin: 20px 0;
+}
+
+nav ul li a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+.lang-switch {
+  margin-top: auto;
+}
+
+.lang-switch button {
+  background: none;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.lang-switch button:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
+.content {
+  margin-left: 140px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #d4af37;
+  text-shadow: 0 0 10px #d4af37;
+}
+
+.hero h2 {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Animazione stelle */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: sparkle 60s linear infinite;
+  z-index: 0;
+}
+
+@keyframes sparkle {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+
+/* Migliora l'interattività e lo stile del menu */
+nav ul li a {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Sezioni della home più eleganti */
+.animated-section {
+  margin: 60px 0;
+  padding: 40px;
+  background-color: rgba(17, 17, 17, 0.85);
+  border-left: 4px solid #d4af37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  animation: fadeInUp 1s ease both;
+}
+
+.animated-section h2 {
+  color: #d4af37;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.animated-section p, .animated-section li {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Animazione fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  border: 3px solid rgba(212, 175, 55, 0.5);
+  border-radius: 8px;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.gallery-centered section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gallery-centered img {
+  margin: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+.gallery-centered img {
+  width: 120px;
+  height: auto;
+  margin: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+.gallery-centered img:hover {
+  transform: scale(1.1);
+}
